@@ -10,7 +10,7 @@ USERNAME = "root"
 
 PASSWORD = "rootroot"
 
-DATABASE = "zhiliao"
+DATABASE = "talk"
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://username:password@localhost/dbname'
 DB_URI = 'mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8'.format(USERNAME, PASSWORD, HOSTNAME, PORT, DATABASE)
@@ -34,5 +34,6 @@ GOOGLE_ACCESS_TOKEN_PARAMS=None
 GOOGLE_AUTHORIZE_URL ='https://accounts.google.com/o/oauth2/auth'
 GOOGLE_AUTHORIZE_PARAMS=None,
 GOOGLE_API_BASE_URL ='https://www.googleapis.com/oauth2/v1/'
-GOOGLE_KWARGS ={'scope': 'openid email profile'}
+GOOGLE_KWARGS ={'scope': 'openid email profile', 'access_type': 'offline'}
+GOOGLE_JWKS_URI = "https://www.googleapis.com/oauth2/v3/certs"
 
